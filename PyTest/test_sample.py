@@ -1,12 +1,42 @@
-def del_pos(a,b):
+import pytest
+
+# Обозначение функций:
+def umnozhenie(a, b):
+  return a * b
+
+def delenie(a,b):
     return a / b
 
-def del_neg(a,b):
-    return a / b
+def slozhenie(a,b):
+    return a + b
 
+def vichitanie(a,b):
+    return a - b
+# ----------------------------------------------------------------
+# Проверка на умножение
+def test_umnozhenie_true():
+  assert umnozhenie(4, 6) == 24
 
-def test_answer_pos():
-    assert del_pos(9,3) == 3
+def test_umnozhenie_false():
+  assert umnozhenie(5, 5) == 125
+# ----------------------------------------------------------------
+# Проверка на деление
+def test_delenie_true():
+  assert delenie(90, 9) == 10
 
-def test_answer_neg():
-    assert del_neg(9,3) == 4
+def test_delenie_false():
+  assert delenie(9, 0) == 1
+# ----------------------------------------------------------------
+# Проверка на сложение
+def test_slozhenie_true():
+  assert slozhenie(80, 9) == 89
+
+def test_slozhenie_false():
+  assert slozhenie(34, 2) == 90
+# ----------------------------------------------------------------
+# Проверка на вычитание
+def test_vichitanie_true():
+  assert vichitanie(5, 3) == 2
+
+def test_vichitanie_false():
+  assert vichitanie(20, 6) == 15
