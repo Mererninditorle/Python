@@ -7,8 +7,10 @@ def umnozhenie(a, b):
 
 def delenie(a, b):
   if b == 0:
+#     print("Делитель должен быть больше нуля")
     return ("Делитель должен быть больше нуля")
-  return a / b
+  else:
+    return a / b
 
 def slozhenie(a, b):
     return a + b
