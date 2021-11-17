@@ -1,16 +1,19 @@
 import pytest
+import math
 
 # Обозначение функций:
 def umnozhenie(a, b):
   return a * b
 
-def delenie(a,b):
-    return a / b
+def delenie(a, b):
+  if b == 0:
+    return ("Делитель должен быть больше нуля")
+  return a / b
 
-def slozhenie(a,b):
+def slozhenie(a, b):
     return a + b
 
-def vichitanie(a,b):
+def vichitanie(a, b):
     return a - b
 # ----------------------------------------------------------------
 # Проверка на умножение
