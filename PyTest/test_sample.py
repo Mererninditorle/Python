@@ -7,8 +7,8 @@ def umnozhenie(a, b):
 
 def delenie(a, b):
   if b == 0:
-#     print("Делитель должен быть больше нуля")
     return ("Делитель должен быть больше нуля")
+    print("Делитель должен быть больше нуля")
   else:
     return a / b
 
@@ -17,6 +17,15 @@ def slozhenie(a, b):
 
 def vichitanie(a, b):
     return a - b
+
+def stepen(a, b):
+  if (b == 0):
+    return 1
+  else:
+    return a ** b
+
+def koren(a):
+  return math.sqrt(a)
 # ----------------------------------------------------------------
 # Проверка на умножение
 def test_umnozhenie_true():
@@ -45,3 +54,19 @@ def test_vichitanie_true():
 
 def test_vichitanie_false():
   assert vichitanie(20, 6) == 15
+
+# -----------------------------------------  
+# Проверка степени
+def test_stepen_true():
+  assert stepen(2, 2) == 4
+
+def test_stepen_false():
+  assert stepen(2, 3) == 20
+# -----------------------------------------  
+# Проверка корня
+def test_koren_true():
+  assert koren(16) == 4
+
+def test_koren_false():
+  assert koren(9) == 2
+# -----------------------------------------  
